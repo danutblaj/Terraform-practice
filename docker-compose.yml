@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  go:
+    image: 393710905303.dkr.ecr.eu-central-1.amazonaws.com/danutblaj:latest
+    environment:
+      - 'DB_HOSTNAME=terraform-20221021083123831800000001.cky0rmojopyi.eu-central-1.rds.amazonaws.com'
+      - 'DB_USERNAME=DevOpsDB'
+      - 'DB_PASSWORD=DevOpsDB'
+      - 'DB_DATABASE=DevOpsDB'
+    ports:
+      - 80
