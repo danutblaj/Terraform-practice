@@ -135,12 +135,12 @@ resource "aws_security_group" "security" {
 }
 resource "aws_db_instance" "db-test" {
   allocated_storage      = 21
-  db_name                = ""
+  db_name                = "DevOps"
   engine                 = "mysql"
   engine_version         = "5.7"
   instance_class         = "db.t3.micro"
-  username               = "DevOpsDB"
-  password               = "DevOpsDB"
+  username               = "DevOps"
+  password               = "DevOps"
   parameter_group_name   = "default.mysql5.7"
   skip_final_snapshot    = true
   vpc_security_group_ids = [aws_security_group.DB-sg.id]
