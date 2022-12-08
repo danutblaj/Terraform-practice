@@ -9,4 +9,4 @@ services:
       - 'DB_PASSWORD=DevOps'
       - 'DB_DATABASE=DevOps'
     ports:
-      - 8080:80
+      - 80:8080
