@@ -22,11 +22,17 @@ The output should look like this :
 # API test
 The first step for testing the API would be building and tagging the Dockerfile to a container registry then running the docker compose, pulling from 
 the registry you used. You will have to enter your RDS endpoint in the docker compose yaml.
+
 You can test this locally to check the api using the 'curl localhost' commannd. The output should be {"message":"okay"}
+
 First you need to copy your docker compose into the EC2 instance using the scp -i VM-key.pem.pem docker-compose.yml <insert ec2 public ipv4 dns here>:~/.
+
 To test the API on the EC2 instance you need to SSH into the instance using the private key 
+
 The command should look like this : ssh -i "VM-key.pem" <insert ec2 public ipv4 dns here>"
+
 Next you should run the following command: docker compose up  -d to run the docker compose in dettached mode
+
 To test the API you should curl <insert EC2 IPv4> which should output {"message":"okay"} and also curl <insert EC2 IPv4>\file\test1.txt which should output
 {"id": 1, "filename": "test1.txt", "keyword": "test1", "substitute": "replaced1" }
 
